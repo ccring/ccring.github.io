@@ -1,0 +1,55 @@
+body {
+    background-color: #FFE7B9;
+}
+
+table {
+  background-color: #CC924C;
+  width: 100%;
+    
+}
+a:link {
+    color: #798EFF;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #7D4CCC;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 50px;
+    color: #8D8699;
+}
+
+h2 {
+  text-align: center;
+  color: #8D8699;
+}
+
+h3 {
+  text-align: center;
+  color: #8D8699;
+}
+
+h4 {
+  text-align: center;
+  color: #8D8699;
+}
+
+#email {
+  position: fixed;
+  text-align: center;
+  bottom: 0;    
+}
+
+#image {
+  text-align: center;
+}
