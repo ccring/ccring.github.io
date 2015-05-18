@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <title>Connor's Tech Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+
+  <h1>Arrays and Hashes</h1>
+  <h2>What's the difference between [] and {}?</h2>
+  <h4>May 17, 2015</h4>
+
+  <section>
+    <p>Arrays are two slightly different, but equally important methods of storing information in Ruby.
+    </p>
+    
+    <p>An array is a list of values that are indexed by integer values. This first value is at index 0, the second is at 1, the third is at 2, etc. If you would like to count from the last value of the array, the index should be a negative number (-1 is the last value). Here is what an array looks like:
+    </p>
+    <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">array <span style="color: #333333">=</span> <span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">1</span>, <span style="background-color: #fff0f0">&quot;two&quot;</span>, <span style="color: #0000DD; font-weight: bold">3</span><span style="color: #333333">.</span><span style="color: #0000DD; font-weight: bold">0</span>, <span style="color: #333333">[</span><span style="color: #0000DD; font-weight: bold">4</span>, <span style="background-color: #fff0f0">&quot;five&quot;</span><span style="color: #333333">]]</span>
+</pre></div>
+
+   <p>As you can see, you can put almost any type of element you would like in an array. It can be an integer, a string, or even another array! There are multitudinous methods that you can use to iterate over an array, so you can do almost whatever you want with the information contained. You can take a look at the Ruby-doc to see everything that you can do with an array.
+  </p>
+
+  <p>A hash is a delicious dish usually made of meat and potatoes with some spices thrown in. Add a fried egg on top to make it a delicious breakfast
+  </p>
+
+  <p>...But also a hash is another powerful type of information storage in Ruby. As opposed to an array, the information in a hash is not ordered by an integer index, but rather a key assigned to each value contained within the hash. The value can be almost anything, similar to the information in an array. Here is what a hash looks like:
+  </p>
+
+  <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007020">hash</span> <span style="color: #333333">=</span> { <span style="background-color: #fff0f0">&quot;name&quot;</span> <span style="color: #333333">=&gt;</span> <span style="background-color: #fff0f0">&quot;Connor&quot;</span>
+<span style="background-color: #fff0f0">&quot;age&quot;</span> <span style="color: #333333">=&gt;</span> <span style="color: #0000DD; font-weight: bold">23</span>
+<span style="background-color: #fff0f0">&quot;favorite food&quot;</span> <span style="color: #333333">=&gt;</span> <span style="background-color: #fff0f0">&quot;Fried Chicken&quot;</span> }
+</pre></div>
+
+<p>The values can be called by their respective keys, and just like an array you can iterate over the hash and do whatever you want with it. Again, you can take a look at the Ruby-doc to see all the methods that you can call on a hash.
+</p>
+        
