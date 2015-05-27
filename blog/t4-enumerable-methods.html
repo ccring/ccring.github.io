@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+  <title>Tech Blog 4</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+
+  <h1>Enumerable Methods</h1>
+  <h2>The Power of group_by</h2>
+  <h4>May 26, 2015</h4>
+
+  <section>
+    <p>Enumerable is a mixin in Ruby that provides tons of great methods that allow
+      you to search and sort data. One of the enumerable methods that I'm sure you've seen is sort, and we all know it is a lifesaver. I'm going to tell you about the group_by method, which is amazing if you know how to use it.  
+    </p>
+
+    <p>Essentially, group_by groups a collection of data based on an argument, and that argument is a block. The output will be a hash where the keys are the results from the block and the values are arrays containing elements in the initial collection that correspond to each key. Let me show you.    
+    </p>
+    
+    <p>Lets make an array. How about we include some of our favorite foods?</p>
+
+    <p><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">foods <span style="color: #333333">=</span> <span style="color: #333333">[</span><span style="background-color: #fff0f0">&quot;chicken&quot;</span>, <span style="background-color: #fff0f0">&quot;spaghetti&quot;</span>, <span style="background-color: #fff0f0">&quot;potatoes&quot;</span>, <span style="background-color: #fff0f0">&quot;beef&quot;</span>, <span style="background-color: #fff0f0">&quot;fries&quot;</span>, <span style="background-color: #fff0f0">&quot;beans&quot;</span>, <span style="background-color: #fff0f0">&quot;cake&quot;</span>, <span style="background-color: #fff0f0">&quot;wings&quot;</span>, <span style="background-color: #fff0f0">&quot;roscoes&quot;</span><span style="color: #333333">]</span>
+    </pre></div>
+    </p>
+
+    <p> Now, lets group each of these foods by length.</p>
+
+    <p><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">foods_by_length <span style="color: #333333">=</span> foods<span style="color: #333333">.</span>group_by {<span style="color: #333333">|</span>food<span style="color: #333333">|</span> food<span style="color: #333333">.</span>length}
+    </pre></div>
+    </p>
+
+    <p>What happens when we run this?</p>
+
+    <p><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">{<span style="color: #0000DD; font-weight: bold">7</span><span style="color: #333333">=&gt;[</span><span style="background-color: #fff0f0">&quot;chicken&quot;</span>, <span style="background-color: #fff0f0">&quot;roscoes&quot;</span><span style="color: #333333">]</span>, <span style="color: #0000DD; font-weight: bold">9</span><span style="color: #333333">=&gt;[</span><span style="background-color: #fff0f0">&quot;spaghetti&quot;</span><span style="color: #333333">]</span>, <span style="color: #0000DD; font-weight: bold">8</span><span style="color: #333333">=&gt;[</span><span style="background-color: #fff0f0">&quot;potatoes&quot;</span><span style="color: #333333">]</span>, <span style="color: #0000DD; font-weight: bold">4</span><span style="color: #333333">=&gt;[</span><span style="background-color: #fff0f0">&quot;beef&quot;</span>, <span style="background-color: #fff0f0">&quot;cake&quot;</span><span style="color: #333333">]</span>, <span style="color: #0000DD; font-weight: bold">5</span><span style="color: #333333">=&gt;[</span><span style="background-color: #fff0f0">&quot;fries&quot;</span>, <span style="background-color: #fff0f0">&quot;beans&quot;</span>, <span style="background-color: #fff0f0">&quot;wings&quot;</span><span style="color: #333333">]</span>}
+    </pre></div>
+    </p>
+
+    <p>Look at that! We got a new hash where the keys are the lengths of the food items and the values are arrays of each food item that has the same length as the value! You can do with this information what you wish, now go forth and group_by, young padawan.
+    </p>
+
+
+
+
+
+
+
+        
+
+  </section>
+</main>
