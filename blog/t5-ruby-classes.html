@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+  <title>Tech Blog 5</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+
+  <h1>A Kick in the Class!</h1>
+  <h2>(Or get a kick out of class)</h2>
+  <h4>May 31, 2015</h4>
+
+  <section>
+    <p>In Ruby, a Class is what is called a first-class object. Other examples of first class objects are Strings and Integers. Inside of a class, you can define objects and methods. But, here's the kicker... YOU CAN DEFINE YOUR OWN CLASS!. That means you can create a class with objects and methods specific to that class. Let's take a look.
+    </p>
+        
+    <p>Let's say we are writing a new song and want to store some basic information about it. Firstly, we start by defining the class.
+    </p>
+    <p><!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">Song</span>
+  <span style="color: #888888">#code will go here</span>
+<span style="color: #008800; font-weight: bold">end</span>
+</pre></div></p>
+
+    <p>That's great, but now what? We need to create a method called initialize. This method will run for every new instance of the class. For our initialize we will define some variables that will contain information about the song. But not just any variables, instance variables! Instance variables are unique to each instance of the class. Makes sense, right? To define these variables our initialize method will take a few arguments, and the instance variables will be assigned to these objects.</p>
+
+    <p><!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">Song</span>
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">initialize</span>(title, genre, key, time, tempo)
+    <span style="color: #3333BB">@title</span> <span style="color: #333333">=</span> title
+    <span style="color: #3333BB">@genre</span> <span style="color: #333333">=</span> genre
+    <span style="color: #3333BB">@key</span> <span style="color: #333333">=</span> key
+    <span style="color: #3333BB">@time</span> <span style="color: #333333">=</span> time
+    <span style="color: #3333BB">@tempo</span> <span style="color: #333333">=</span> tempo
+  <span style="color: #008800; font-weight: bold">end</span>
+<span style="color: #008800; font-weight: bold">end</span>
+</pre></div></p>
+
+  <p>Those variables look a bit different than the ones we're used to. The only difference in syntax is that instance variables have "@" in front of them.</p>
+
+  <p>Now, let's define a method for this class that takes all of the information about your song and prints it to the console</p>
+
+  <p><!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">Song</span>
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">initialize</span>(title, genre, key, time, tempo)
+    <span style="color: #3333BB">@title</span> <span style="color: #333333">=</span> title
+    <span style="color: #3333BB">@genre</span> <span style="color: #333333">=</span> genre
+    <span style="color: #3333BB">@key</span> <span style="color: #333333">=</span> key
+    <span style="color: #3333BB">@time</span> <span style="color: #333333">=</span> time
+    <span style="color: #3333BB">@tempo</span> <span style="color: #333333">=</span> tempo
+  <span style="color: #008800; font-weight: bold">end</span>
+
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">song_info</span>
+    <span style="color: #007020">p</span> <span style="background-color: #fff0f0">&quot;You are writing a </span><span style="background-color: #eeeeee">#{</span><span style="color: #3333BB">@genre</span><span style="background-color: #eeeeee">}</span><span style="background-color: #fff0f0"> song called </span><span style="background-color: #eeeeee">#{</span><span style="color: #3333BB">@title</span><span style="background-color: #eeeeee">}</span><span style="background-color: #fff0f0">!&quot;</span>
+    <span style="color: #007020">p</span> <span style="background-color: #fff0f0">&quot;It is in the key of </span><span style="background-color: #eeeeee">#{</span><span style="color: #3333BB">@key</span><span style="background-color: #eeeeee">}</span><span style="background-color: #fff0f0"> in </span><span style="background-color: #eeeeee">#{</span><span style="color: #3333BB">@time</span><span style="background-color: #eeeeee">}</span><span style="background-color: #fff0f0"> at </span><span style="background-color: #eeeeee">#{</span><span style="color: #3333BB">@tempo</span><span style="background-color: #eeeeee">}</span><span style="background-color: #fff0f0">.&quot;</span>
+  <span style="color: #008800; font-weight: bold">end</span>
+<span style="color: #008800; font-weight: bold">end</span>
+</pre></div></p>
+
+  <p>Pretty straight-forward. Now we have a method that will tell us all about our song when we call it on an instance of the class. First, we need to call a new instance of the class. We need to make sure that the class is capitalized and that we have the correct number of arguments.</p>
+
+  <p><!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">new_song <span style="color: #333333">=</span> <span style="color: #003366; font-weight: bold">Song</span><span style="color: #333333">.</span>new(<span style="background-color: #fff0f0">&quot;Ruby Bogonias&quot;</span>, <span style="background-color: #fff0f0">&quot;Psychadelic Rock&quot;</span>, <span style="background-color: #fff0f0">&quot;C# minor&quot;</span>, <span style="background-color: #fff0f0">&quot;7/8&quot;</span>, <span style="background-color: #fff0f0">&quot;160 BPM&quot;</span>)
+</pre></div></p>
+
+  <p>We have a new instance of the class now, so we can call our song_info method on this instance and see what kind of song we have!</p>
+
+  <p><!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">new_song <span style="color: #333333">=</span> <span style="color: #003366; font-weight: bold">Song</span><span style="color: #333333">.</span>new(<span style="background-color: #fff0f0">&quot;Ruby Bogonias&quot;</span>, <span style="background-color: #fff0f0">&quot;Psychadelic Rock&quot;</span>, <span style="background-color: #fff0f0">&quot;C# minor&quot;</span>, <span style="background-color: #fff0f0">&quot;7/8&quot;</span>, <span style="background-color: #fff0f0">&quot;160 BPM&quot;</span>)
+new_song<span style="color: #333333">.</span>song_info
+
+<span style="background-color: #fff0f0">&quot;You are writing a Psychadelic Rock song called Ruby Bogonias!&quot;</span>
+<span style="background-color: #fff0f0">&quot;It is in the key of C# minor in 7/8 at 160 BPM.&quot;</span>
+</pre></div></p>
+
+  <p>Awesome! But what if we only want to see one aspect of our song instead of everything? We can just print the variable, right? Wrong! It's an instance variable, so it is unique to this instance of the method, remember? Ruby has a really handy way of sharing instance variables called attributes. If we attribute the variables, then we can use each variable as a method on the instance of its class and look at it by itself. We need to add a little something to the class for this.</p>
+
+  <p><!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">Song</span>
+
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">initialize</span>(title, genre, key, time, tempo)
+    <span style="color: #3333BB">@title</span> <span style="color: #333333">=</span> title
+    <span style="color: #3333BB">@genre</span> <span style="color: #333333">=</span> genre
+    <span style="color: #3333BB">@key</span> <span style="color: #333333">=</span> key
+    <span style="color: #3333BB">@time</span> <span style="color: #333333">=</span> time
+    <span style="color: #3333BB">@tempo</span> <span style="color: #333333">=</span> tempo
+  <span style="color: #008800; font-weight: bold">end</span>
+
+<span style="color: #003388; font-weight: bold">attr_reader</span> <span style="color: #AA6600">:title</span>
+
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">song_info</span>
+    <span style="color: #007020">p</span> <span style="background-color: #fff0f0">&quot;You are writing a </span><span style="background-color: #eeeeee">#{</span><span style="color: #3333BB">@genre</span><span style="background-color: #eeeeee">}</span><span style="background-color: #fff0f0"> song called </span><span style="background-color: #eeeeee">#{</span><span style="color: #3333BB">@title</span><span style="background-color: #eeeeee">}</span><span style="background-color: #fff0f0">!&quot;</span>
+    <span style="color: #007020">p</span> <span style="background-color: #fff0f0">&quot;It is in the key of </span><span style="background-color: #eeeeee">#{</span><span style="color: #3333BB">@key</span><span style="background-color: #eeeeee">}</span><span style="background-color: #fff0f0"> in </span><span style="background-color: #eeeeee">#{</span><span style="color: #3333BB">@time</span><span style="background-color: #eeeeee">}</span><span style="background-color: #fff0f0"> at </span><span style="background-color: #eeeeee">#{</span><span style="color: #3333BB">@tempo</span><span style="background-color: #eeeeee">}</span><span style="background-color: #fff0f0">.&quot;</span>
+  <span style="color: #008800; font-weight: bold">end</span>
+
+<span style="color: #008800; font-weight: bold">end</span>
+</pre></div>
+</p>
+
+  <p>Now, we can see only the title of the song if we want!</p>
+
+  <p><!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">new_song <span style="color: #333333">=</span> <span style="color: #003366; font-weight: bold">Song</span><span style="color: #333333">.</span>new(<span style="background-color: #fff0f0">&quot;Ruby Bogonias&quot;</span>, <span style="background-color: #fff0f0">&quot;Psychadelic Rock&quot;</span>, <span style="background-color: #fff0f0">&quot;C# minor&quot;</span>, <span style="background-color: #fff0f0">&quot;7/8&quot;</span>, <span style="background-color: #fff0f0">&quot;160 BPM&quot;</span>)
+<span style="color: #007020">p</span> new_song<span style="color: #333333">.</span>title
+
+<span style="background-color: #fff0f0">&quot;Ruby Bogonias&quot;</span>
+</pre></div></p>
+
+<p>We got the title! We can attribute all of the instance variables, and we dont even need to to each one individually. We can do it all at once like this:</p>
+
+<p><!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #003388; font-weight: bold">attr_reader</span> <span style="color: #AA6600">:title</span>, <span style="color: #AA6600">:genre</span>, <span style="color: #AA6600">:key</span>, <span style="color: #AA6600">:time</span>, <span style="color: #AA6600">:tempo</span>
+</pre></div>
+</p>
+
+<p>There is a bunch more stuff that you can do with classes in Ruby, but I hope you got a basic understanding from my little kick in the class!</p>
+        
+
+  </section>
+</main>
