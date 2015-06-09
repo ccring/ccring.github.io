@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <title>Tech Blog 6</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+</head>
+
+<main>
+
+  <h1>Variable Scope in Ruby</h1>
+  <h2>Why so Many?</h2>
+  <h4>June 7, 2015</h4>
+
+  <section>
+    <p>There are 5 different variable types in Ruby, Let's take a look at them one at a time.</p>
+      
+    <h4>Global Variables</h4>
+
+    <p>Global variables are just what their name suggests, global! These variables can be accessed from anywhere within a ruby program, and changed from anywhere within the program. However, this global functionality makes the use of global variables dangerous and can make debugging very difficult. This would be like... I dunno, changing the position of the Earth in the Solar System!
+    </p>
+    
+    <p>OK, maybe nothing quite so drastic, but you get the idea. Global variables are defined with the prefix "$", and there are actually a few default defined global variables that can help you get some information about your Ruby environment.
+    </p>
+
+    <h4>Class Variables</h4>
+
+    <p>Again, this type of variable is pretty well explained by its name. These variables are defined and exist in classes. One important distinction is that class variables exist across all instances of a class, as opposed to a different type of variable that we will look at next. Class variables are defined with the prefix "@@" and must be initialized on creation of the class.
+    </p>
+
+    <h4>Instance Variables</h4>
+
+    <p>Instance variables exist, you guessed it, in specific instances of a class. To compare, a class variable will stay the same across every instance of a class, but you can have the same instance variable with a different value for each different instance of the same class. These are sort of like local variables, in that they are local to one instance of their class. Instance variables are defined with the prefix "@". Dont't confuse this syntax with class variables, which begin with two at-signs.
+    </p>
+
+    <h4>Local Variables</h4>
+
+    <p>These variables are pretty self-explanatory, and we use them all the time! Local variables are local to whatever construct in which they are declared. So if a variable is defined within a loop, then that variable can only be accessed inside of that loop. The same goes for methods, and any other code construct you can think of. Local variables have to have either a lowercase letter or "_" at the beginning of its name
+    </p>
+
+    <h4>Constants</h4>
+
+    <p>If you have a bit of math or science under your belt, you're probably familiar with the idea of a constant, like pi for calculating dimenstions of circles or avogadro's number when performing atomic unit conversions in chemistry. However, Ruby is a little bit weird in that you can change constants. You will get some protest and warning from your interpreter, but it is possible. In Ruby, it is helpful to think of a constant as a value that should not be changed rather than cannot be changed. It is also important to note that constants are given global scope unless they are defined within a class or module, in which case they can only be accessed wthin the context of the construct in which it was defined. Constants must be named starting with a capital letter, but it is common practice to define constants using ALL_CAPS.
+    </p>
+
+  </section>
+</main>
