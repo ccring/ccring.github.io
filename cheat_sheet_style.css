@@ -1,0 +1,19 @@
+body {
+  background: #f9f73a
+}
+
+p {
+  text-align: center;
+  border: 1px solid red;
+}
+
+h1 {
+  text-align: center
+}
+
+ul p { 
+  border:solid gray;
+  border-width:.1em .1em .1em .8em;
+  padding:.2em .6em;  
+  background: white
+}

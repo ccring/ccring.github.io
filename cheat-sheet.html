@@ -2,7 +2,7 @@
 <head>
   <title>Cheatsheet</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../stylesheets/cheatsheet-stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="cheat_sheet_style.css">
 </head>
 
 <main>
@@ -19,18 +19,15 @@
       Hashes are best used when you would like your data to be easily accessible by calling a name or symbol that represents it. In the context of hashes this is called a key-value pair.
     </li>
     <li>A Hash can be easily created by using its implicit form:</li>
-    <p>Age = { "Connor" => 23, "Andrew" => 25, "Steve" => 37 }</p> <!--code block 1 -->
-
+    <p> age = { "Connor" => 23, "Andrew" => 25, "Steve" => 37 }</p> <!--code block 1 -->
+    <li>A hash can also be created using the ':' to create symbol-value pairs</li>
+    <p> hash = {city_popuation: 400000, city_size: 42} </p> <!-- code block 2 -->
   </ul>
-
-  <img src="url" alt="first_image">
-  <img src="url" alt="second_image">
 
   <h4>Commonly Associated Methods</h4>
   <p>
-    <a href="url">Method 1</a>
-    <a href="url">Method 2</a>
-    <a href="url">Method 3</a>
+    <a href="http://ruby-doc.org/core-2.2.0/Hash.html#method-i-each_pair">Hash#each {|key,value| block }</a>
+    <a href="http://ruby-doc.org/core-2.2.0/Hash.html#method-i-flatten">Hash#flatten </a>
   </p>
 
   <h3><a href="http://ruby-doc.org/core-2.0.0/Array.html">Arrays</a></h3>
@@ -38,25 +35,19 @@
   <p>Arrays are ordered, integer-indexed collections of any object.</p>
   
   <ul>
-    <li>Structure</li>
-    <li>Scenarios</li>
+    <li>Array indexing starts at 0, as in C or Java. A negative index is assumed to be relative to the end of the array---that is, an index of -1 indicates the last element of the array, -2 is the next to last element in the array, and so on.</li>
+    <li>A new array can be created by using the literal constructor [] and may containt any type of object within it.</li>
+    <p> ary = [1, "two", 3.0]  </p> <!-- css block 3 -->
   </ul>
 
-  <img src="url" alt="first_image">
-  <img src="url" alt="second_image">
+<!--   <img src="url" alt="first_image">
+  <img src="url" alt="second_image"> -->
 
   <h4>Commonly Associated Methods</h4>
   <p>
-    <a href="url">Method 1</a>
-    <a href="url">Method 2</a>
-    <a href="url">Method 3</a>
-  </p>
-
-  <h4>Commonly Associated Methods</h4>
-  <p>
-    <a href="url">Method 1</a>
-    <a href="url">Method 2</a>
-    <a href="url">Method 3</a>
+    <a href="http://ruby-doc.org/core-2.2.0/Array.html#method-i-map">Array#map {|element| block}</a>
+    <a href="http://ruby-doc.org/core-2.2.0/Array.html#method-i-include-3F">Array#include?</a>
+    <a href="http://ruby-doc.org/core-2.2.0/Array.html#method-i-include-3F">Array#each(.with_index) </a>
   </p>
 
   <h3><a href="http://ruby-doc.org/core-2.0.0/String.html">Strings</a></h3>
@@ -66,18 +57,18 @@
   </p>
   
   <ul>
-    <li>Structure</li>
-    <li>Scenarios</li>
+    <li>A string is constructed within single or double quotations</li>
+    <li>A single string is similarly indexed like an array, where string[0] will yield the first character, and string[-1] yields the last character</li>
   </ul>
-
+<!-- 
   <img src="url" alt="first_image">
-  <img src="url" alt="second_image">
+  <img src="url" alt="second_image"> -->
 
   <h4>Commonly Associated Methods</h4>
   <p>
-    <a href="url">Method 1</a>
-    <a href="url">Method 2</a>
-    <a href="url">Method 3</a>
+    <a href="http://ruby-doc.org/core-2.2.0/String.html#method-i-gsub">gsub!</a>
+    <a href="http://ruby-doc.org/core-2.2.0/String.html#method-i-split">split</a>
+    <a href="http://ruby-doc.org/core-2.2.0/String.html#method-i-insert">insert</a>
   </p>
 
   <h3><a href="http://ruby-doc.org/core-2.0.0/Integer.html">Integers</a></h3>
@@ -85,20 +76,18 @@
   <p>Integer is the basis for the two concrete classes that hold whole numbers, Bignum and Fixnum.</p>
   
   <ul>
-    <li>Structure</li>
-    <li>Scenarios</li>
+    <li>Outside of the Bignum class, integers can either be fixed (i.e. 3, 5, 49) or floats (1.4,3.242, 4.0001)</li>
+    <li>Bignums are objects that are created automatically when integer calculations would otherwise overflow a Fixnum.</li>
   </ul>
 
-  <img src="url" alt="first_image">
-  <img src="url" alt="second_image">
+<!--   <img src="url" alt="first_image">
+  <img src="url" alt="second_image"> -->
 
   <h4>Commonly Associated Methods</h4>
   <p>
-    <a href="url">Method 1</a>
-    <a href="url">Method 2</a>
-    <a href="url">Method 3</a>
+    <a href="url">Standard mathmetical Operators: + - * / </a>
+    <a href="url"> Modulus %</a>
+    <a href="http://ruby-doc.org/core-2.2.0/Integer.html#method-i-floor">Floor</a>
   </p>
 
 </main>
-
-<!-- border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;    code block 1 -->
